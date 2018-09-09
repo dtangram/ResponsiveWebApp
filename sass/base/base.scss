@@ -1,0 +1,418 @@
+*{
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	background: #CCC;
+	color: #FFF;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+	position: relative;
+}
+
+
+
+/* TYPOGRAPHY ================================== */
+h1, h2{
+	line-height: 1;
+	text-transform: capitalize;
+}
+
+h1{
+  color: $colorWhite;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h2{
+	font-size: 17px;
+}
+
+strong, em{
+	color: #666666;
+}
+
+p{
+	color: $colorWhite;
+  font-size: .8em;
+}
+
+
+
+/* BASE STRUCTURE =============================== */
+.container{
+  background: $colorWhite;
+  @extend %center-element;
+  padding-bottom: 170px;
+  position: relative;
+  width: 1000px;
+
+  @include mq(small){
+    padding-bottom: 80px;
+  }
+
+  @include mq(mediumLarge){
+    width: 100%;
+  }
+}
+
+
+
+/* HEADER ================================== */
+header{
+  background: url(../img/concert-photo.jpg) no-repeat 0 -180px / cover;
+  height: 350px;
+  margin-bottom: 40px;
+  padding: 20px 9%;
+  position: relative;
+	width: 100%;
+
+  @include mq(small){
+    width: 100%;
+  }
+
+  @include mq(medium){
+    background-position: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  /*LOGO*/
+  > div:nth-child(1){
+  	display: inline-block;
+  	width: 30%;
+
+    @include mq(small){
+      width: 50% !important;
+    }
+
+    @include mq(medium){
+      width: 40%;
+    }
+
+    a{
+      img{
+        float: left;
+        margin-right: 1%;
+        width: 6.5%;
+
+        @include mq(small){
+          margin-right: 2%;
+        }
+
+        @include mq(medium){
+          width: 15px;
+        }
+      }
+    }
+  }
+
+  /*NAVIGATION*/
+  nav{
+    float: right;
+  	width: 210px;
+    margin-right: 0;
+
+    @include mq(small){
+      right: 26px !important;
+    }
+
+    @include mq(medium){
+      position: absolute;
+      right: 60px;
+      top: 19px;
+      z-index: 99;
+      width: 115px;
+    }
+
+    img{
+      cursor: pointer;
+      display: none;
+      width: 30px;
+    }
+
+    img:nth-child(1){
+      @include mq(medium){
+        display: block;
+        float: right;
+      }
+    }
+
+    img:nth-child(2){
+      @include mq(medium){
+        float: right;
+      }
+    }
+
+    ul{
+      display: flex;
+      flex-direction: row;
+      visibility: visible;
+
+      @include mq(medium){
+        background: $colorCharcoal;
+        flex-direction: column;
+        margin-top: 38px;
+        visibility: hidden;
+      }
+
+      li{
+      	padding: 3px 3%;
+      	text-align: center;
+
+        @include mq(medium){
+          font-size: 1.2em;
+          margin-bottom: 20px;
+          text-align: left;
+        }
+
+        a{
+          color: $colorWhite;
+          font-size: .9em;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          &:last-child{
+            margin-left: 7%;
+          }
+        }
+      }
+    }
+  }
+
+  nav ul li:nth-child(4), nav ul li:last-child{
+  	border-right: 0;
+  }
+
+  nav ul li a:hover, .currentLink{
+  	color: $colorGold;
+  }
+
+  .currentLink{
+    font-weight: bold;
+  }
+}
+
+/*SEARCH FIELD*/
+form{
+  @extend %center-element;
+  margin-top: 80px;
+  width: 500px;
+
+  @include mq(medium){
+    width: 90%;
+  }
+
+  label{
+    background: $colorCharcoal;
+    display: inline-block;
+    font-size: .9em;
+    padding: 5px;
+
+    @include mq(small){
+      width: 100%;
+      line-height: 20px;
+    }
+
+    @include mq(medium){
+      text-align: center;
+    }
+  }
+
+  div{
+    background: $colorWhite;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2.5px 2%;
+
+    #searchInput{
+      flex: 1;
+      padding: 11.5px 0;
+
+      @include mq(small){
+        padding: 14px 0;
+      }
+
+      &[placeholder]{
+        opacity: .4;
+      }
+    }
+
+    button{
+      cursor: pointer;
+      background: transparent;
+    }
+  }
+
+  p{
+    background: $colorCharcoal;
+    color: $colorRed;
+    font-size: .9em;
+    font-weight: bold;
+    opacity: 0;
+    padding: 10px;
+    text-transform: uppercase;
+
+    @include mq(small){
+      font-size: .8em;
+      line-height: 20px;
+    }
+
+    @include mq(medium){
+      text-align: center;
+    }
+  }
+}
+
+
+
+h2{
+  background: $colorCharcoal;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-left: 10%;
+  opacity: 0;
+  padding: 8px .5%;
+  text-transform: capitalize;
+
+  @include mq(small){
+    width: 100%;
+  }
+
+  @include mq(medium){
+    margin-left: 0;
+    padding: 8px;
+  }
+}
+
+
+
+section{
+  background: $colorWhite;
+  padding: 0 10%;
+  margin-bottom: 4%;
+
+  @include mq(small){
+    padding: 0 2%;
+
+    > :nth-child(odd){
+      margin-right: 0;
+    }
+  }
+
+  @include mq(medium){
+    padding-left: 2%;
+    padding-right: 2%;
+
+    > :nth-child(even){
+      margin-right: 0;
+    }
+  }
+
+  article{
+    margin-bottom: 20px;
+    margin-right: 3%;
+    display: inline-block;
+    width: 30%;
+
+    @include mq(small){
+      display: flex;
+      height: 130px;
+      margin-right: 0;
+      width: 100% !important;
+    }
+
+    @include mq(medium){
+      width: 48%;
+    }
+
+    img{
+      margin-bottom: 0;
+      width: 100%;
+
+      @include mq(small){
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    p{
+      background: $colorCharcoal;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 14px 5%;
+      -webkit-margin-before: -.4em;
+
+      @include mq(small){
+        -webkit-margin-before: 0;
+      }
+
+      span{
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: 5%;
+        color: $colorGold;
+
+        @include mq(small){
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.container > button{
+  background-color: $colorGold;
+  border-radius: 6px;
+  display: inherit;
+  font-weight: bold;
+  padding: 15px 3%;
+  text-align: center;
+  @extend %center-element;
+  cursor: pointer;
+
+  @include mq(small){
+    padding: 20px 10%;
+    width: 90% !important;
+  }
+
+  @include mq(mediumLarge){
+    width: 40%;
+  }
+}
+
+
+
+/* FOOTER =============================== */
+footer{
+  bottom: 0;
+  position: absolute;
+  z-index: 3;
+  margin: 0 auto;
+	padding: 5%;
+  left: 0;
+  right: 0;
+	background: $colorCharcoal;
+
+  p{
+    font-size: .8em;
+  	text-align: center;
+    @extend %center-element;
+    width: 60%;
+
+    @include mq(small){
+      width: 100%;
+    }
+  }
+}

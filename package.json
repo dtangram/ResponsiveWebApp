@@ -1,0 +1,29 @@
+{
+  "name": "responsivewebapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "gulp-watch": "gulp-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtangram/ResponsiveWebApp.git"
+  },
+  "author": "Douglas T. Angram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtangram/ResponsiveWebApp/issues"
+  },
+  "homepage": "https://github.com/dtangram/ResponsiveWebApp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.1",
+    "http-server": "^0.11.1"
+  }
+}

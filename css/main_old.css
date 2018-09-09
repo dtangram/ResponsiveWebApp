@@ -1,0 +1,214 @@
+header > form:nth-child(3) > div, section {
+  background-color: #FFF; }
+
+.container, header > form:nth-child(3), section > button, footer p {
+  margin-left: auto;
+  margin-right: auto; }
+
+header nav ul li, section > button, footer p {
+  text-align: center; }
+
+header, header > form:nth-child(3) > div {
+  width: 100%; }
+
+header > div:nth-child(1), header > form:nth-child(3) > div {
+  display: inline-block; }
+
+header > form:nth-child(3) > div img, section > button {
+  cursor: pointer; }
+
+* {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #CCC;
+  color: #FFF;
+  font: 16px/1.25 "Program OT", Arial, sans-serif;
+  position: relative; }
+
+/* TYPOGRAPHY ================================== */
+h1, h2 {
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 40px;
+  color: #16A085; }
+
+h2 {
+  font-size: 35px; }
+
+strong, em {
+  color: #666666; }
+
+h3 {
+  color: #FFF; }
+
+h4 {
+  color: #AAAAAA;
+  font: 14px "Program OT Bold", Arial, sans-serif; }
+
+p {
+  color: #FFF;
+  font-size: .8em; }
+
+/* BASE STRUCTURE =============================== */
+.container {
+  background: #FFF;
+  position: relative;
+  width: 1000px; }
+
+/* HEADER ================================== */
+header {
+  background: url(../img/concert-photo.jpg) no-repeat 0 -180px/cover;
+  height: 350px;
+  padding: 4%;
+  /*LOGO*/
+  /*NAVIGATION*/
+  /*SEARCH FIELD*/ }
+  header > div:nth-child(1) {
+    width: 30%; }
+    header > div:nth-child(1) a img {
+      float: left;
+      margin-right: 1%;
+      width: 5.5%; }
+    header > div:nth-child(1) h3 {
+      color: #FFF;
+      font-weight: bold;
+      text-transform: uppercase; }
+  header nav {
+    float: right;
+    width: 250px;
+    margin-right: 0; }
+    header nav ul {
+      display: flex; }
+      header nav ul li {
+        flex-direction: row;
+        padding: 1% 3%; }
+        header nav ul li a {
+          color: #FFF;
+          font-size: .9em;
+          text-transform: uppercase;
+          text-decoration: none; }
+          header nav ul li a:last-child {
+            margin-left: 7%; }
+          header nav ul li a img {
+            float: left;
+            margin-top: -15%; }
+  header nav ul li:nth-child(4), header nav ul li:last-child {
+    border-right: 0; }
+  header nav ul li a:hover, header .currentLink {
+    color: #F5A623; }
+  header .currentLink {
+    font-weight: bold; }
+  header > form:nth-child(3) {
+    margin-top: 80px;
+    width: 500px; }
+    header > form:nth-child(3) p {
+      background: #2B2B2B;
+      padding: 1% 3%;
+      width: 55%; }
+    header > form:nth-child(3) > div {
+      padding: 2% 3%; }
+      header > form:nth-child(3) > div input {
+        float: left; }
+        header > form:nth-child(3) > div input[placeholder] {
+          opacity: .4; }
+      header > form:nth-child(3) > div img {
+        float: right;
+        width: 20px; }
+
+section {
+  padding: 5% 10% 18%; }
+  section h3 {
+    background: #2B2B2B;
+    margin-bottom: 3%;
+    padding: 1% 3%;
+    text-transform: capitalize;
+    width: 30%; }
+  section article article {
+    margin-bottom: 3%;
+    margin-right: 3%;
+    display: inline-block;
+    width: 30%; }
+    section article article img {
+      margin-bottom: 0;
+      width: 100%; }
+    section article article p {
+      background: #2B2B2B;
+      padding: 6% 5%;
+      -webkit-margin-before: -.4em; }
+      section article article p span {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: 5% !important;
+        color: #F5A623 !important; }
+  section > button {
+    background-color: #F5A623;
+    border-radius: 6px;
+    display: inherit;
+    padding: 1% 1.5%; }
+
+/* FOOTER =============================== */
+footer {
+  bottom: 0;
+  position: absolute;
+  z-index: 3;
+  margin: 0 auto;
+  padding: 5%;
+  left: 0;
+  right: 0;
+  background: #2B2B2B; }
+  footer p {
+    font-size: .8em !important;
+    width: 60% !important; }
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    width: 100% !important; }
+    .container section > button {
+      width: 30% !important; } }
+
+@media only screen and (max-width: 800px) {
+  .container header {
+    background-position: center;
+    margin-bottom: 3%; }
+    .container header > div:nth-child(1) {
+      width: 40%; }
+    .container header > div:nth-child(3) {
+      width: 90%; }
+      .container header > div:nth-child(3) p {
+        width: 65%; }
+  .container section {
+    padding-left: 2%;
+    padding-right: 2%; }
+    .container section article article {
+      width: 48%; }
+      .container section article article:nth-child(even) {
+        margin-right: 3%; }
+      .container section article article:nth-child(odd) {
+        margin-right: 0; }
+    .container section > button {
+      width: 50% !important; } }
+
+@media only screen and (max-width: 500px) {
+  .container header > div:nth-child(1) {
+    width: 60%; }
+  .container header > div:nth-child(3) p {
+    width: 100%; }
+  .container section {
+    padding-left: 2%;
+    padding-right: 2%; }
+    .container section article article {
+      width: 100%;
+      margin-right: 0; }
+    .container section > button {
+      border-radius: 0;
+      width: 100% !important; } }
