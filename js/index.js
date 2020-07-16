@@ -7,7 +7,7 @@ const submit = document.querySelector(".container > button");
 
 //QUERY TEXT IN INPUT FIELD
 var queryInput = function(){
-  const api = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=" + searchField.value + "&api_key=eed52d1ba57c50e9025f090b596fd40f&format=json";
+  const api = "https://ws.audioscrobbler.com/2.0/?method=album.search&album=" + searchField.value + "&api_key=eed52d1ba57c50e9025f090b596fd40f&format=json";
   runQuery(api);
 };
 
